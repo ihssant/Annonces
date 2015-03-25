@@ -1,4 +1,18 @@
+#oc_user:
+    #resource: "@OCUserBundle/Resources/config/routing.yml"
+#    prefix:   /
+
 oc_platform:
     resource: "@OCPlatformBundle/Resources/config/routing.yml"
     prefix:   /platform
 
+login:
+    pattern:   /login
+    defaults:  { _controller: OCUserBundle:Security:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    pattern:   /logout    
+    
