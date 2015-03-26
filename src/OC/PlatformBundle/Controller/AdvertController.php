@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use OC\PlatformBundle\Form\AdvertType;
 use OC\PlatformBundle\Form\AdvertEditType;
 use OC\PlatformBundle\Form\OC\PlatformBundle\Form;
-
+// use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 // Controlleur principal du projet
 class AdvertController extends Controller
 {
@@ -75,9 +75,10 @@ class AdvertController extends Controller
             slug '".$slug."', créée en ".$year." et au format ".$format."."
 		);
 	}
-	
+
 	public function addAction(Request $request)
 	{
+		
 		$advert = new Advert;
 		
 		// On crée le formulaire de Advert a partir de AdverType
